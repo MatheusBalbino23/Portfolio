@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">Meu Portfólio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos específicos adicionados inline */
+        .main-content {
+            text-align: left;
+            /* Alinha o texto à esquerda */
+            margin-top: 100px;
+            /* Adiciona margem superior ao conteúdo principal */
+            color: #fff;
+            /* Define a cor do texto para branco */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Minha Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio" class="btn" data-translate="inicio">Início</a></li>
+                    <li><a href="#sobre" class="btn" data-translate="sobre">Sobre</a></li>
+                    <li><a href="#projetos" class="btn" data-translate="projetos">Projetos</a></li>
+                    <li><a href="#habilidades" class="btn" data-translate="habilidades">Habilidades</a></li>
+                    <li>
+                        <!-- Nova seção para os botões de idioma -->
+                        <div class="language-container">
+                            <!-- Botão "Meu Contato" -->
+                            <a href="#contato" class="btnl" data-translate="meu_contato">Meu Contato</a>
+                            <!-- Botões de idioma -->
+                            <div class="language-container">
+                                <button id="englishBtn" class="language">
+                                    <img src="img/us_flag.png" class="flag" alt="English Flag">
+                                    <span data-translate="english">English</span>
+                                </button>
+                                <button id="portugueseBtn" class="language">
+                                    <img src="img/br_flag.png" class="flag" alt="Brazilian Flag">
+                                    <span data-translate="portuguese">Português</span>
+                                </button>
+                            </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <p>
+            <h1 class="welcome-text" data-translate="welcome">Olá, meu nome é</h1><span class="name"
+                data-translate="my_name">Matheus Balbino</span> <span class="and_i_am" data-translate="and_i_am">e eu
+                sou</span> <span class="role role-text role-animation" id="roleAnimation"
+                data-translate="role">desenvolvedor Full
+                Stack.</span>
+            </p>
+        </div>
+    </div>
+
+    <section id="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="profile-picture">
+                    <img src="img/minha_foto.jpg" alt="Sua Foto">
+                </div>
+                <div class="sobre-text">
+                    <h2 data-translate="sobre_mim">Sobre mim</h2>
+                    <Ao data-translate="about_me">Sou um jovem apaixonado por tecnologia. Atualmente, estou cursando o
+                        primeiro
+                        semestre de Desenvolvimento de Sistemas, onde tenho a oportunidade de mergulhar ainda mais
+                        no
+                        mundo da programação e da tecnologia. Minha jornada no campo da tecnologia começou quando
+                        tive
+                        meu primeiro contato com programação e descobri minha paixão por criar soluções inovadoras e
+                        resolver problemas por meio do desenvolvimento de software. Ao longo da minha jornada, tive a
+                        incrível oportunidade de trabalhar
+                        como administrador de
+                        banco
+                        de dados por um ano. Essa experiência me proporcionou uma compreensão mais profunda dos
+                        sistemas
+                        de banco de dados e me ajudou a desenvolver habilidades essenciais de gerenciamento e
+                        organização. Estou constantemente buscando aprender e me aprimorar, seja por meio de
+                        cursos online,
+                        projetos
+                        pessoais ou experiências profissionais. Estou entusiasmado com as infinitas possibilidades
+                        que a
+                        tecnologia oferece e comprometido em fazer a diferença por meio do meu trabalho. Estou
+                        ansioso
+                        para enfrentar novos desafios, colaborar com colegas talentosos e contribuir para projetos
+                        inovadores no campo da tecnologia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <div class="container">
+            <h2 data-translate="projetos">Projetos</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="img/projeto1.png" alt="Projeto 1" class="project-image">
+                    <h3 data-translate="project1_title">Projeto 1</h3>
+                    <p data-translate="project1_description">Site de jogos desenvolvido em sala de aula para provarmos
+                        nosso conhecimento em HTML, CSS e Javascript</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/projeto2.png" alt="Projeto 2" class="project-image">
+                    <h3 data-translate="project2_title">Projeto 2</h3>
+                    <p data-translate="project2_description">Desenvolvi uma versão digital do clássico jogo da velha
+                        utilizando linguagens de programação como HTML, CSS e JavaScript. Os jogadores podem competir
+                        entre si ou contra o computador em partidas divertidas e desafiadoras.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/projeto3.png" alt="Projeto 3" class="project-image">
+                    <h3 data-translate="project3_title">Projeto 3</h3>
+                    <p data-translate="project3_description">Projetei e implementei um aplicativo web para ajudar os
+                        usuários a controlar suas finanças pessoais. O aplicativo permite que os usuários registrem suas
+                        despesas, categorizem-nas e visualizem gráficos e relatórios detalhados para uma melhor
+                        compreensão de seus hábitos de gastos.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/projeto4.png" alt="Projeto 4" class="project-image">
+                    <h3 data-translate="project4_title">Projeto 4</h3>
+                    <p data-translate="project4_description">Desenvolvi uma calculadora simples e funcional utilizando
+                        HTML, CSS e JavaScript. A calculadora suporta operações básicas de matemática, como adição,
+                        subtração, multiplicação e divisão, proporcionando uma ferramenta útil para cálculos rápidos e
+                        precisos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="habilidades">
+        <div class="container">
+            <h2 data-translate="habilidades">Habilidades</h2>
+            <div class="habilidades-content">
+                <p data-translate="skills_paragraph1">Sou proficiente em várias linguagens de programação, incluindo
+                    HTML, CSS, JavaScript, C++, e
+                    Java.
+                    Além disso, possuo conhecimento intermediário/avançado em SQL, o que me permite criar consultas
+                    complexas e gerenciar eficientemente bancos de dados. Tenho habilidades avançadas em Excel e
+                    Power
+                    BI, o que me permite analisar e visualizar dados de forma eficaz.</p>
+                <p data-translate="skills_paragraph2">Em termos de comunicação, tenho um nível básico de proficiência em
+                    inglês para conversação e um
+                    nível
+                    intermediário para comunicação em ambientes técnicos e cotidianos. Além disso, sou hábil em
+                    trabalhar em equipe, colaborando efetivamente com colegas para alcançar objetivos comuns. Estou
+                    sempre
+                    buscando aprender e me atualizar nas últimas tecnologias e tendências do mercado, e estou
+                    comprometido em desenvolver minhas habilidades para me tornar um profissional mais completo e
+                    eficiente.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2 data-translate="meu_contato">Meu Contato</h2>
+            <div class="contato-content">
+                <p data-translate="contact_intro">Se você quiser entrar em contato comigo para oportunidades de
+                    colaboração, oportunidades de
+                    trabalho
+                    ou apenas para dizer olá, sinta-se à vontade para me enviar um e-mail ou me conectar através das
+                    minhas redes sociais:</p>
+                <ul class="contact-info">
+                    <li>
+                        <img src="img/email.png" alt="Ícone de E-mail">
+                        <a href="mailto:seuemail@example.com" class="white-text"
+                            data-translate="email_address">matheusbalbino9@gmail.com</a>
+                    </li>
+                    <li>
+                        <img src="img/telefone.png" alt="Ícone de Telefone">
+                        (11) 994855904
+                    </li>
+                    <li>
+                        <img src="img/pdf_icon.png" alt="Ícone de PDF">
+                        <a href="CV.pdf" class="white-text" target="_blank" data-translate="download_resume">Baixar
+                            meu currículo em PDF</a>
+                    </li>
+                </ul>
+                <ul class="social-links">
+                    <li><a href="https://www.linkedin.com/in/matheus-balbino-128781276/" target="_blank"><img
+                                src="img/linkedin.png" alt="Ícone do LinkedIn"></a></li>
+                    <li><a href="https://github.com/MatheusBalbino23" target="_blank" target="_blank"><img
+                                src="img/github.png" alt="Ícone do GitHub"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <img src="img/background_image.jpg" alt="Imagem de fundo" class="background-image">
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Meu Portfólio</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <div class="footer-space"></div>
+</body>
+
+</html>

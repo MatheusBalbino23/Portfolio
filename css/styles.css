@@ -1,0 +1,573 @@
+/* Define um box-sizing global para garantir que a largura e a altura dos elementos incluam as bordas e o preenchimento */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos globais do corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    /* Define a fonte padrão para o corpo do documento */
+    line-height: 1.6;
+    /* Define a altura da linha para melhorar a legibilidade */
+    color: #fff;
+    /* Define a cor do texto para branco */
+    margin: 0;
+    /* Remove as margens padrão do corpo do documento */
+    background-size: cover;
+    /* Garante que a imagem de fundo cubra todo o corpo do documento */
+    background-repeat: no-repeat;
+    /* Evita a repetição da imagem de fundo */
+}
+
+/* Estilos para o contêiner principal */
+.container {
+    width: 80%;
+    /* Define a largura do contêiner principal */
+    margin: auto;
+    /* Centraliza o contêiner na página */
+    padding: 20px;
+    /* Adiciona um preenchimento interno ao contêiner */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background: rgba(0, 0, 0, 0.5);
+    /* Define um fundo semi-transparente para o cabeçalho */
+    color: #fff;
+    /* Define a cor do texto para branco */
+    height: 80px;
+    /* Define a altura do cabeçalho */
+    position: fixed;
+    /* Fixa o cabeçalho na parte superior da janela de visualização */
+    top: 0;
+    /* Alinha o cabeçalho ao topo da janela de visualização */
+    left: 0;
+    /* Alinha o cabeçalho à esquerda da janela de visualização */
+    width: 100%;
+    /* Garante que o cabeçalho ocupe toda a largura da página */
+    z-index: 1000;
+    /* Garante que o cabeçalho esteja acima de outros elementos */
+}
+
+/* Estilos para o título do cabeçalho */
+header h1 {
+    float: left;
+    /* Alinha o título do cabeçalho à esquerda */
+}
+
+/* Estilos para a navegação no cabeçalho */
+header nav {
+    float: right;
+    /* Alinha a navegação à direita */
+}
+
+/* Estilos para a lista de navegação */
+header nav ul {
+    list-style: none;
+    /* Remove os marcadores de lista */
+    display: flex;
+    /* Exibe as categorias em linha */
+}
+
+/* Estilos para os itens da lista de navegação */
+header nav ul li {
+    margin-left: 5px;
+    /* Define uma margem esquerda para os itens da lista */
+}
+
+/* Estilos para o link da lista de navegação */
+header nav ul li a {
+    text-decoration: none;
+    /* Remove a decoração de texto do link */
+    color: #fff;
+    /* Define a cor do texto para branco */
+    padding: 8px 15px;
+    /* Adiciona preenchimento interno aos links */
+    border-radius: 5px;
+    /* Adiciona bordas arredondadas aos links */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Define um fundo semi-transparente para os links */
+    position: relative;
+    /* Permite o posicionamento relativo dos links */
+    top: -45px;
+    /* Move os links para cima */
+}
+
+/* Estilos para o link de navegação destacado */
+header nav ul li a.highlight {
+    background-color: #3300ff;
+    /* Define uma cor de destaque para o link destacado */
+}
+
+/* Estilos para as seções da página */
+section {
+    padding: 20px 0;
+    /* Adiciona espaçamento interno às seções */
+}
+
+/* Estilos para o rodapé */
+footer {
+    background: #333;
+    /* Define o fundo do rodapé */
+    color: #fff;
+    /* Define a cor do texto para branco */
+    text-align: center;
+    /* Alinha o texto no centro */
+    padding: -60px 0;
+    /* Adiciona espaçamento interno ao rodapé */
+    position: fixed;
+    /* Fixa o rodapé na parte inferior da janela de visualização */
+    bottom: 0;
+    /* Alinha o rodapé ao final da página */
+    width: 100%;
+    /* Garante que o rodapé ocupe toda a largura da página */
+}
+
+/* Estilos para os itens do carrossel */
+.carousel-item {
+    display: inline-block;
+    flex: 0 0 auto;
+    /* Define a flexibilidade dos itens do carrossel */
+    width: 300px;
+    /* Define a largura dos itens do carrossel */
+    margin-right: 50px;
+    /* Adiciona margem direita aos itens do carrossel */
+    scroll-snap-align: start;
+    /* Alinha os itens do carrossel ao início */
+}
+
+/* Estilos para as imagens do carrossel */
+.carousel-item img {
+    width: 100%;
+    /* Garante que as imagens do carrossel ocupem toda a largura do contêiner */
+    border-radius: 8px;
+    /* Adiciona bordas arredondadas às imagens do carrossel */
+}
+
+/* Estilos para o logotipo */
+.logo {
+    display: flex;
+    /* Exibe o logotipo como um contêiner flexível */
+    align-items: center;
+    /* Alinha os itens do logotipo ao centro verticalmente */
+    margin-right: 20px;
+    /* Adiciona margem direita ao logotipo */
+}
+
+/* Estilos para a imagem do logotipo */
+.logo img {
+    max-width: 80px;
+    /* Define a largura máxima da imagem do logotipo */
+    margin-top: -25px;
+    /* Move a imagem do logotipo para cima */
+}
+
+/* Estilos para o nome */
+.name {
+    display: flex;
+    /* Exibe o nome como um contêiner flexível */
+    flex-direction: column;
+    /* Define a direção dos itens como coluna */
+}
+
+/* Estilos para os botões */
+.btn {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-left: 10px;
+    /* Adiciona margem entre os botões */
+}
+
+/* Estilos para o efeito hover nos botões */
+.btn:hover {
+    background-color: #555;
+}
+
+/* Estilos para o botão destacado */
+.highlight {
+    background-color: #3300ff;
+}
+
+/* Estilos para a imagem de fundo */
+.background-image {
+    position: fixed;
+    /* Fixa a imagem de fundo na tela */
+    top: 0;
+    /* Alinha a imagem de fundo ao topo */
+    left: 0;
+    /* Alinha a imagem de fundo à esquerda */
+    width: 100%;
+    /* Garante que a imagem de fundo cubra toda a largura da tela */
+    height: 100%;
+    /* Garante que a imagem de fundo cubra toda a altura da tela */
+    z-index: -1;
+    /* Define uma camada abaixo de todos os outros elementos */
+    object-fit: cover;
+    /* Garante que a imagem de fundo cubra toda a área do elemento */
+}
+
+/* Estilos para o conteúdo principal */
+.main-content {
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    margin-top: 100px;
+    /* Adiciona margem superior ao conteúdo principal */
+    color: #ffffff;
+    /* Define a cor do texto para branco */
+}
+
+/* Estilos para o título do conteúdo principal */
+.main-content h1 {
+    font-size: 50px;
+    /* Define o tamanho da fonte do título */
+    font-weight: bold;
+    /* Define o peso da fonte como negrito */
+    line-height: 1.4;
+    /* Define a altura da linha para melhorar a legibilidade */
+}
+
+/* Estilos para o nome */
+.name {
+    font-size: 47px;
+    /* Define o tamanho da fonte do nome */
+    font-weight: bold;
+    /* Define o peso da fonte como negrito */
+}
+
+/* Estilos para o papel */
+.role {
+    font-size: 40px;
+    /* Aumenta o tamanho da fonte */
+    font-weight: bold;
+    /* Deixa a fonte em negrito */
+    color: #ffffff;
+    /* Mantém a cor original */
+    font-family: 'Arial Black', sans-serif;
+    /* Escolha uma fonte mais chamativa */
+}
+
+/* Estilos para o "e eu sou" */
+.and_i_am {
+    font-size: 25px;
+    /* Aumenta um pouco mais o tamanho */
+}
+
+/* Estilo para o texto "desenvolvedor Full Stack" */
+.role-text {
+    color: #ffffff;
+    /* Defina a cor desejada para o texto */
+}
+
+
+/* Espaçamento entre as seções */
+.footer-space {
+    height: 50px;
+    /* Define a altura do espaço entre as seções */
+}
+
+/* Estilos para as seções da página */
+section {
+    padding: 80px 0;
+    /* Adiciona espaçamento interno às seções */
+}
+
+/* Estilos para o conteúdo do sobre */
+.sobre-content {
+    display: flex;
+    /* Exibe o conteúdo do sobre como um contêiner flexível */
+    flex-direction: row;
+    /* Define a direção dos itens como linha */
+    align-items: center;
+    /* Alinha os itens do conteúdo do sobre ao centro verticalmente */
+}
+
+/* Estilos para a imagem do sobre */
+.sobre-image {
+    margin-right: 20px;
+    /* Adiciona margem direita à imagem do sobre */
+}
+
+/* Estilos para o texto do sobre */
+.sobre-text {
+    flex: 1;
+    /* Define o texto do sobre como flexível para ocupar o espaço restante */
+}
+
+/* Estilos para o título "Sobre Mim" */
+#sobre h2 {
+    margin-bottom: 30px;
+    /* Adiciona espaço abaixo do título "Sobre Mim" */
+}
+
+/* Estilos para o título "Habilidades" */
+#habilidades h2 {
+    margin-bottom: 20px;
+    /* Adiciona espaço abaixo do título "Habilidades" */
+}
+
+/* Estilos para o título "Contato" */
+#contato h2 {
+    margin-bottom: 10px;
+    /* Adiciona espaço abaixo do título "Contato" */
+}
+
+/* Estilos para os ícones das redes sociais */
+.social-links img {
+    width: 50px;
+    /* Define o tamanho dos ícones das redes sociais */
+    height: auto;
+    /* Mantém a proporção dos ícones das redes sociais */
+    margin-right: 10px;
+    /* Adiciona margem direita aos ícones das redes sociais */
+}
+
+/* Estilos para os ícones de informações de contato */
+.contact-info img {
+    width: 50px;
+    /* Define o tamanho dos ícones de informações de contato */
+    height: auto;
+    /* Mantém a proporção dos ícones de informações de contato */
+    margin-right: 10px;
+    /* Adiciona margem direita aos ícones de informações de contato */
+}
+
+.role-animation {
+    font-size: 27px;
+    /* Tamanho inicial do texto */
+    animation: fadeInOut 3s linear infinite;
+    /* Adiciona a animação de fadeInOut */
+    animation-fill-mode: forwards;
+    /* Mantém o estado final da animação após sua conclusão */
+    color: #ffffff;
+    /* Defina a cor desejada para o texto */
+
+}
+
+
+/* Estilo para cada letra */
+.role-animation span {
+    display: inline-block;
+    /* Faz com que as letras sejam exibidas em linha */
+    animation: fadeInOut 1s linear forwards;
+    /* Adiciona a animação de fadeInOut */
+    opacity: 0;
+    /* Define a opacidade inicial das letras como 0 */
+}
+
+/* Definição da animação de fadeInOut */
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+}
+
+.role-animation {
+    font-size: 27px;
+    /* Tamanho inicial do texto */
+    animation: fadeInOut 3s linear infinite;
+    /* Adiciona a animação de fadeInOut */
+}
+
+.role-animation .letter {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInOut 0.s linear infinite;
+}
+
+.role-animation .letter:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.role-animation .letter:nth-child(2) {
+    animation-delay: 0.0s;
+}
+
+/* Adicione mais regras para os outros elementos de acordo com a sequência */
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Estilos para o contêiner das bandeiras de idioma */
+.language-container {
+    display: flex;
+    align-items: flex-start;
+    /* Ajusta o alinhamento para cima */
+    margin-top: -20px;
+    /* Adiciona margem superior negativa */
+}
+
+/* Estilos para cada bandeira de idioma */
+.language {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    /* Define o fundo das bandeiras como transparente */
+
+}
+
+/* Estilos para as bandeiras */
+.language .flag {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+/* Estilos para o texto dos idiomas */
+.language span {
+    font-size: 14px;
+}
+
+/* Estilos para os botões */
+.btnl {
+    text-decoration: none;
+    color: #fff;
+    padding: 4px 15px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-left: 10px;
+    margin-top: 15px;
+    background-color: #3300ff;
+    /* Adiciona margem entre os botões */
+}
+
+/* Estilos para o efeito hover nos botões */
+.btnl:hover {
+    background-color: #555;
+}
+
+
+/* Estilos para a foto de perfil */
+.profile-picture {
+    width: 270px;
+    /* Aumenta a largura da área da foto */
+    height: 270px;
+    /* Aumenta a altura da área da foto */
+    overflow: hidden;
+    /* Oculta qualquer parte da imagem que exceda a área definida */
+    border-radius: 10px;
+    /* Adiciona bordas arredondadas */
+    border: 1px solid #fff;
+    /* Reduz a largura da borda branca */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* Adiciona uma sombra suave */
+    transition: transform 0.3s, border-color 0.3s;
+    /* Adiciona transição para o efeito de zoom e borda */
+    margin-right: 20px;
+    /* Move um pouco para a esquerda */
+}
+
+/* Estilos para a imagem */
+.profile-picture img {
+    width: 100%;
+    /* Garante que a imagem ocupe toda a largura da área da div */
+    height: 100%;
+    /* Garante que a imagem ocupe toda a altura da área da div */
+    object-fit: cover;
+    /* Mantém a proporção da imagem e corta qualquer excesso para ajustar */
+    transition: transform 0.3s;
+    /* Adiciona transição para o efeito de zoom */
+}
+
+/* Efeito de zoom quando o cursor está próximo */
+.profile-picture:hover img {
+    transform: scale(1.1);
+    /* Aumenta ligeiramente o tamanho da imagem */
+}
+
+/* Efeito de borda quando o cursor está próximo */
+.profile-picture:hover {
+    border-color: #4a04b2;
+    /* Muda a cor da borda quando o cursor está próximo */
+}
+
+.white-text {
+    color: white;
+}
+
+.project-image {
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-image:hover {
+    transform: scale(1.1);
+}
+
+/* Adicione este bloco dentro do seu bloco @media para estilos específicos de dispositivos móveis */
+@media screen and (max-width: 1060px) {
+
+    /* Remova as margens e o padding dos itens da lista de navegação para economizar espaço */
+    header nav ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Oculte os botões de navegação para dispositivos móveis */
+    header nav {
+        display: none;
+    }
+
+    /* Ajuste o tamanho do cabeçalho para dispositivos móveis */
+    header {
+        height: 100px;
+        padding: -50px;
+    }
+
+    /* Ajuste o tamanho do logotipo para dispositivos móveis */
+    .logo img {
+        max-width: 100px;
+    }
+
+    /* Ajuste o tamanho do texto principal para dispositivos móveis */
+    .main-content h1 {
+        font-size: 30px;
+    }
+
+    /* Ajuste o tamanho do nome para dispositivos móveis */
+    .name {
+        font-size: 25px;
+    }
+
+    /* Ajuste o tamanho do papel para dispositivos móveis */
+    .role {
+        font-size: 15px;
+    }
+
+    /* Ajuste o tamanho do texto "e eu sou" para dispositivos móveis */
+    .and_i_am {
+        font-size: 15px;
+    }
+
+    .sobre-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Ajuste a largura do texto "Sobre Mim" para preencher a largura do contêiner */
+    .sobre-text {
+        width: 100%;
+    }
+
+}
